@@ -1,4 +1,5 @@
 # laravel-blockchain
+
 Laravel package for interacting with blockchain api 
 
 # laravel-blockchain
@@ -11,16 +12,16 @@ Laravel package for interacting with blockchain api
 
 To get the latest version of blockchain api, simply run the code below in your project.
 
-```
+``` 
 "composer require n3omaster/laravel-blockchain"
 ```
+
 Once Laravel Blockchain is installed, You need to register the service provider. Open up `config/app.php` and add the following to the `providers` key.
 
-* `Maxtee\Blockchain\BlockchainServiceProvider::class,`
-
+* `N3omaster\Blockchain\BlockchainServiceProvider::class,`
 Also, register the Facade like so:
 
-```php
+``` php
 'aliases' => [
     ...
     'Blockchain' => Maxtee\Blockchain\Facades\Blockchain::class,
@@ -32,15 +33,15 @@ Also, register the Facade like so:
 
 You can publish the configuration file using this command:
 
-```bash
-php artisan vendor:publish --provider="Maxtee\Blockchain\BlockchainServiceProvider"
+``` bash
+php artisan vendor:publish --provider="N3omaster\Blockchain\BlockchainServiceProvider"
 ```
 
 A configuration-file named `blockchain.php` with default settings will be placed in your `config` directory:
 
 You can visit this link to get your blockchain api
 
-```
+``` 
 https://api.blockchain.info/customer/signup
 ```
 
@@ -48,63 +49,71 @@ https://api.blockchain.info/customer/signup
 
 Open your .env file and add the following in this format. Ensure you must have gotten your api key:
 
-```php
+``` php
 BLOCKCHAIN_API=***********************
 DEFAULT_BTC_FEE=0.0001
 TRANSACTION_BTC_FEE=0.000
 ```
 
-## USING /MAXTEE/BLOCKCHAIN PACKAGE 
-```
+## USING /N3OMASTER/LARAVEL-BLOCKCHAIN PACKAGE 
+
+``` 
 Add the following line to your controller
 
 use Blockchain
 ```
 
 ## 1. GET RATES
-```php
+
+``` php
 Blockchain::getRates();
 ```
 
-
 ## 2. CONVERT A CURRENCY VALUE TO BTC
-```php
+
+``` php
 $rates = Blockchain::convertCurrencyToBTC('NGN'  600000);
 ```
 
-
 ## 3. GET STATISTICS CHART
-```php
+
+``` php
 $rates = Blockchain::getStats();
 ```
 
-
 ## 4. CREATE WALLET
-```php
+
+``` php
 $wallet = Blockchain::createWallet($wallet_password);
 ```
 
 ## 5. WALLET BALANCE
-```php
+
+``` php
 $wallet = Blockchain::getWalletBalance($wallet_guid, $wallet_password);
 ```
 
 ## 6. Making Outgoing Payment
-```php
+
+``` php
 $wallet = Blockchain::makeOutgoingPayment($wallet_guid, $amount, $wallet_password, $to_guid);
 ```
+
 ## 7. List Address
-```php
+
+``` php
 $wallet = Blockchain::listAddress($wallet_guid, $wallet_password);
 ```
 
 ## 8. Create New Address
-```php
+
+``` php
 $wallet = Blockchain::createNewAddress($wallet_guid, $wallet_password, $label ='');
 ```
 
 ## Credit 
-Readme document was inpsired and tuned from one of @Unicodedeveloper. Prosper Otemuyiwa.
+
+Fork from @maxteebabs
 
 ## Contributing
 
@@ -112,14 +121,17 @@ Please feel free to fork this package and contribute by submitting a pull reques
 
 ## How can I thank you?
 
-Why not star the github repo? I'd love the attention! Why not share the link for this repository on Twitter or HackerNews? Spread the word!
+Why not star the github repo? I'd love the attention! 
 
-Don't forget to [follow me on twitter](https://twitter.com/taiwomix)!
+Why not share the link for this repository on Twitter or HackerNews? 
+
+Spread the word!
+
+Don't forget to [follow us on twitter ErichgarciaCruz](https://twitter.com/ErichGarciaCruz) and [Kopek](https://twitter.com/ErichGarciaCruz)!
 
 Thanks!
-Famurewa Taiwo
+Erich & Kopek
 
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-

@@ -1,19 +1,10 @@
 <?php
 
-/*
- * This file is part of the Laravel blockchain package.
- *
- * (c) Famurewa Taiwo <famurewa_taiwo@yahoo.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-
-namespace Maxtee\Blockchain;
+namespace N3omaster\Blockchain;
 
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
-use Maxtee\Blockchain\Exceptions\BlockchainException;
+use N3omaster\Blockchain\Exceptions\BlockchainException;
 use Auth;
 use Illuminate\Support\Str;
 

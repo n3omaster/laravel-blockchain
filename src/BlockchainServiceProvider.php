@@ -1,6 +1,6 @@
 <?php
 
-namespace Maxtee\Blockchain;
+namespace N3omaster\Blockchain;
 
 use Illuminate\Support\ServiceProvider;
 
