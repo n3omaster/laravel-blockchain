@@ -4,7 +4,7 @@ Laravel package for interacting with blockchain api
 
 # laravel-blockchain
 
-> A Laravel +5 Package for working with blockchain api
+> A Laravel +7 Package for working with blockchain api
 
 ## Installation
 

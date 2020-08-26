@@ -12,6 +12,7 @@ class BlockchainServiceProvider extends ServiceProvider
     * @var bool
     */
     protected $defer = false;
+
     /**
      * Bootstrap the application services.
      *
@@ -19,7 +20,7 @@ class BlockchainServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $config = realpath(__DIR__.'/../resources/config/blockchain.php');
+        $config = realpath(__DIR__ . '/../resources/config/blockchain.php');
 
         $this->publishes([
             $config => config_path('blockchain.php')
@@ -33,14 +34,15 @@ class BlockchainServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('laravel-blockchain', function() {
+        $this->app->bind('laravel-blockchain', function () {
             return new Blockchain;
         });
     }
+
     /**
-    * Get the services provided by the provider
-    * @return array
-    */
+     * Get the services provided by the provider
+     * @return array
+     */
     public function provides()
     {
         return ['laravel-blockchain'];
