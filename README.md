@@ -1,18 +1,18 @@
-# Laravel-blockchain-api
-This is a laravel package for interacting with blockchain api 
+# laravel-blockchain
+Laravel package for interacting with blockchain api 
 
 # laravel-blockchain
 
-> A Laravel 5 Package for working with blockchain api
+> A Laravel +5 Package for working with blockchain api
 
 ## Installation
 
-[PHP](https://php.net) 5.4+ or [HHVM](http://hhvm.com) 3.3+, and [Composer](https://getcomposer.org) are required.
+[PHP](https://php.net) 7.2.5+ and [Composer](https://getcomposer.org) are required.
 
 To get the latest version of blockchain api, simply run the code below in your project.
 
 ```
-"composer require maxtee/blockchain"
+"composer require n3omaster/laravel-blockchain"
 ```
 Once Laravel Blockchain is installed, You need to register the service provider. Open up `config/app.php` and add the following to the `providers` key.
 
